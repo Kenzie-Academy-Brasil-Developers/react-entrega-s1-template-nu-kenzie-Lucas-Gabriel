@@ -3,8 +3,6 @@ import { Input } from "../Form/Input";
 import { Select } from "../Form/Select";
 import { v4 as uuidv4 } from 'uuid';
 
-
-import 'react-toastify/dist/ReactToastify.css';
 export function Form({addNote}){
     const[description, setDescription] = useState("");
     const[value, setValue] = useState("");

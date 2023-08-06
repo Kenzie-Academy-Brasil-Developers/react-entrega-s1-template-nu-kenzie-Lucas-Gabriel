@@ -30,6 +30,9 @@
     text-align: center;
     margin-left: 12px;
     background-color: var(--color-grey-2);
+    position: absolute;
+    bottom: 15%;
+    right: 3%;
 }
 .deleteButton:hover{
     background-color:var(--color-grey-1);

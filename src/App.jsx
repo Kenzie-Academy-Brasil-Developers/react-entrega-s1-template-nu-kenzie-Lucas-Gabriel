@@ -1,4 +1,4 @@
-import { Form } from "./components/form"
+import { Form } from "./components/Form";
 import { Extract } from "./components/Extract"
 import { useState } from "react"
 import { CardSection } from "./components/CardSection";

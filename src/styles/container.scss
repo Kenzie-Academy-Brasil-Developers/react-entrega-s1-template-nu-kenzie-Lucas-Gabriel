@@ -1,7 +1,6 @@
 .main-div{
     display: flex;
     flex-direction: column;
-    gap: 32px;
 
 }
 
@@ -16,7 +15,7 @@
         width: 100%;
         max-width: 1080px;
         display: grid;
-        grid-template-rows: 4fr 1fr;
+        grid-template-rows: 3fr 1fr;
         grid-template-columns: 1fr 2fr;
         grid-template-areas: "form section"
                             "extract section"; 
