@@ -1,0 +1,23 @@
+.extract{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "h3 span"
+                        "p p " ;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    gap: 24px;
+                    
+    
+        h3{
+            grid-area: h3;
+        }
+        span{
+            grid-area: span;
+        }
+        p{
+            grid-area: p;
+        }
+    
+}
