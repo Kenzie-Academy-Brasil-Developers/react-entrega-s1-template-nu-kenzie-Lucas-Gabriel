@@ -3,9 +3,6 @@ import { Extract } from "./components/Extract"
 import { useState } from "react"
 import { CardSection } from "./components/CardSection";
 import { Header } from "./components/Header";
-import Logo from "./assets/Logo.svg"
-import Icon from "./assets/icon.svg"
-import LogoDark from "./assets/logo-dark.svg"
 import "./styles/index.scss"
 
 function App() {
@@ -34,7 +31,7 @@ function App() {
 
   return (
     <div className={modeState === true ? "dark" : ""}>
-        <Header logo={Logo} icon={Icon} changeMode={changeMode} logoDark={LogoDark} darkState={modeState}/>
+        <Header changeMode={changeMode} darkState={modeState}/>
         <div className="main-div">
             <Form addNote={addNote}/>
             <Extract valueSum={valueSum}/>
