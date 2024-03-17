@@ -1,15 +1,14 @@
 import { Form } from "./components/Form";
 import { Extract } from "./components/Extract"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { CardSection } from "./components/CardSection";
 import { Header } from "./components/Header";
 import "./styles/index.scss"
+import style from "./styles/modules/page.module.scss"
+import { ThemeContext } from "./providers/ThemeContext";
 
 function App() {
     const[noteList, setNoteList] = useState([]);
-    const[modeState, setModeState] = useState(false);
-
-    const changeMode = ()=>{setModeState(!modeState)};
 
     const addNote = (cardData)=>{
         setNoteList([...noteList, cardData])
@@ -29,9 +28,15 @@ function App() {
         accumulator - parseInt(currentNote.value)
     }, 0)
 
+    const {
+        isDark
+    } = useContext(ThemeContext)
+
+    const mainDivClass = isDark ? style.mainDivDark : style.mainDivLight
+
   return (
-    <div className={modeState === true ? "dark" : ""}>
-        <Header changeMode={changeMode} darkState={modeState}/>
+    <div className={mainDivClass}>
+        <Header/>
         <div className="main-div">
             <Form addNote={addNote}/>
             <Extract valueSum={valueSum}/>

@@ -1,12 +1,19 @@
 import {MdDarkMode, MdLightMode} from "react-icons/md"
 import { FaWallet } from "react-icons/fa";
 import style from "./style.module.scss"
+import { useContext } from "react";
+import { ThemeContext } from "../../providers/ThemeContext";
 
-export function Header({darkState, changeMode}){
-   const smallClassName = darkState ? style.light : style.dark;
+export function Header(){
+    const {
+        isDark,
+        changeMode
+    }
+    = useContext(ThemeContext);
+   const smallClassName = isDark ? style.light : style.dark;
 
     return(
-        <header className={darkState === true ? "" : "light"}>
+        <header className={isDark === true ? "" : "light"}>
             <div className={style.logoDiv}>
                 <FaWallet
                 color={"#FD377E"}
@@ -18,7 +25,7 @@ export function Header({darkState, changeMode}){
             </div>
             <button onClick={changeMode}>
                 {
-                    darkState ? <MdLightMode size={18} color="white"/>
+                    isDark ? <MdLightMode size={18} color="white"/>
                     : <MdDarkMode size={18} color="black"/>
 
                 }

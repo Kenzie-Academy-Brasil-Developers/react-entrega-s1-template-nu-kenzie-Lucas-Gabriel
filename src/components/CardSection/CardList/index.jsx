@@ -1,4 +1,8 @@
+import { useContext } from "react"
+import { ThemeContext } from "../../../providers/ThemeContext"
+
 export function CardList({noteList, removeNote}){
+    const{isDark} = useContext(ThemeContext);
     return(
         
         <div>
@@ -25,7 +29,7 @@ export function CardList({noteList, removeNote}){
                             </li>
                         )
                     })}
-                </ul> : <h2 className="title2 grey4 colorChange">Você ainda não possui nenhum lançamento</h2>
+                </ul> : <h2 className={isDark ? "title2 textWhite" : "title2 grey4"}>Você ainda não possui nenhum lançamento</h2>
             }
         </div>
     )

@@ -16,27 +16,15 @@
 }
 
 
-.dark{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    .container{
-        border-radius: 8px;
-    }
-    body{
-        background-color: black;
-        width: 100vw;
-        height: 100vh;
-    }
-    .colorChange{
-        color: white;
-    }
-    header{
-        button{
-            img{
-                background-color: white;
-                border-radius: 100%;
-            }
+
+.colorChange{
+    color: white;
+}
+header{
+    button{
+        img{
+            background-color: white;
+            border-radius: 100%;
         }
     }
 }

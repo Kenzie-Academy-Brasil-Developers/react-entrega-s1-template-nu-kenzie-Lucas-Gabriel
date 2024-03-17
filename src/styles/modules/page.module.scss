@@ -1,0 +1,15 @@
+%mainDivDefaults{
+    width: 100vw;
+    height: 100vh;
+    padding: .5rem;
+}
+
+.mainDivLight{
+    @extend %mainDivDefaults;
+    background-color: white;
+}
+
+.mainDivDark{
+    @extend %mainDivDefaults;
+    background-color: black;
+}
